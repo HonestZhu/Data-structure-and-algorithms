@@ -214,12 +214,13 @@ void bsTree<K, E>::inOrderOutput(const binaryTreeNode<pair<const K, E>> *node) c
 
 int main()
 {
-    srand(time(NULL));
+    //srand(time(NULL));
     bsTree<int, int> bt;
     int n = 20;
-    int idx[11] = {30, 2, 5, 40, 35, 32, 31, 33, 80, 60, 85};
-    for (int i = 0; i < 11; ++i)
-        bt.insert({idx[i], idx[i]});
+    // int idx[11] = {30, 2, 5, 40, 35, 32, 31, 33, 80, 60, 85};
+    for (int i = 0; i < n; ++i)
+        bt.insert({rand() % n, i});
+        //bt.insert({idx[i], idx[i]});
     bt.erase(40);
     bt.erase(30);
     bt.showTree();
